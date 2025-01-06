@@ -14,14 +14,14 @@ email.addEventListener("input", () => {
   } else {
     email.setCustomValidity("");
   }
-  email.checkValidity();
+  email.reportValidity();
 });
 
 const country = form.elements["country"];
 country.addEventListener("input", () => {
   country.setCustomValidity("");
   if (!country.validity.valid) {
-    country.setCustomValidity("Country name is mandatory.");
+    country.setCustomValidity('Only nums, chars, "." and "-" allowed.');
   }
   country.reportValidity();
 });
