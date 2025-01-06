@@ -49,3 +49,16 @@ form {
 form > label {
   text-align: right;
 }
+
+form :invalid {
+  outline: 3px solid red;
+}
+
+.password-match-error {
+  color: red;
+  display: none;
+}
+
+.password-match-error.displayed {
+  display: block;
+}

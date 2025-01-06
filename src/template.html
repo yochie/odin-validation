@@ -8,19 +8,42 @@
   <body>
     <form action="" method="get" novalidate>
       <label for="email">Email :</label>
-      <input type="email" name="email" id="email" />
+      <input type="text" name="email" id="email" required />
 
       <label for="country">Country :</label>
-      <input type="text" name="country" id="country" />
+      <input
+        type="text"
+        name="country"
+        id="country"
+        pattern="[A-Za-z\-]*"
+        required
+      />
 
       <label for="zip">Zip :</label>
-      <input type="text" name="zip" id="zip" />
+      <input
+        type="text"
+        name="zip"
+        id="zip"
+        pattern="[A-Za-z0-9\-\.]*"
+        required
+      />
 
       <label for="pwd">Password :</label>
-      <input type="password" name="pwd" id="pwd" />
+      <input type="password" name="pwd" id="pwd" minlength="8" required />
 
       <label for="pwd_conf">Confirm :</label>
-      <input type="password" name="pwd_conf" id="pwd_conf" />
+      <div>
+        <input
+          type="password"
+          name="pwd_conf"
+          id="pwd_conf"
+          minlength="8"
+          required
+        />
+        <div class="password-match-error">Does not match password.</div>
+      </div>
+
+      <button type="button">Submit</button>
     </form>
   </body>
 </html>
