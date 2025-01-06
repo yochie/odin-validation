@@ -37,3 +37,15 @@ img {
 }
 
 /* Normalize end */
+
+form {
+  width: fit-content;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+form > label {
+  text-align: right;
+}
